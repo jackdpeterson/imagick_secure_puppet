@@ -10,6 +10,6 @@ class imagick_secure {
 
   exec { "imagick_exists":
     command => '/bin/true',
-    onlyif  => 'test -f /etc/ImageMagick/policy.xml'
+    onlyif  => '/usr/bin/test -f /etc/ImageMagick/policy.xml'
   }
 }
